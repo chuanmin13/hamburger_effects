@@ -114,3 +114,53 @@ twoBtn.addEventListener("click", () => {
         twoOpen = false;
     }
 });
+
+// menu-burger
+const menuBtn = document.querySelector(".menu-btn");
+const menuText = document.querySelector(".menu-text");
+const menuTop = document.querySelector(".menu-top");
+const menuMid = document.querySelector(".menu-mid");
+let menuOpen = false;
+
+menuBtn.addEventListener("click", () => {
+    if (!menuOpen) {
+        menuText.style.display = "block";
+        menuText.classList.add("open");
+        menuTop.classList.add("line-none");
+        menuMid.classList.add("line-none");
+        menuOpen = true;
+    } else {
+        menuText.style.display = "none";
+        menuText.classList.remove("open");
+        menuTop.classList.remove("line-none");
+        menuMid.classList.remove("line-none");
+        menuOpen = false;
+    }
+});
+
+// plus-burger
+const plusBtn = document.querySelector(".plus-btn");
+const plusTop = document.querySelector(".plus-top");
+const plusMid = document.querySelector(".plus-mid");
+const plusBottom = document.querySelector(".plus-bottom");
+let plusOpen = false;
+
+plusBtn.addEventListener("click", () => {
+    if (!plusOpen) {
+        plusTop.classList.remove("close");
+        plusBottom.classList.remove("close");
+        plusTop.classList.add("open");
+        plusBottom.classList.add("open");
+        plusMid.style.display = "none";
+
+        plusOpen = true;
+    } else {
+        plusTop.classList.remove("open");
+        plusBottom.classList.remove("open");
+        plusTop.classList.add("close");
+        plusBottom.classList.add("close");
+        plusMid.style.display = "block";
+
+        plusOpen = false;
+    }
+});
