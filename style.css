@@ -1,0 +1,29 @@
+body {
+    background-color: #222;
+}
+
+.container {
+    background-color: #fff;
+}
+
+.copyright {
+    color: #eee;
+    font-size: 12px;
+}
+
+span {
+    color: rgb(224, 93, 46);
+    font-weight: bold;
+}
+
+main {
+    padding: 40px 80px 40px;
+}
+
+.demo-wrap {
+    background-color: #222;
+    width: 120px;
+    height: 120px;
+    margin: 0 30px 40px 30px;
+    border-radius: 20px;
+}

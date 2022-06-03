@@ -1,0 +1,96 @@
+.burger-wrap {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.burger-line {
+    width: 50px;
+    height: 6px;
+    background-color: #fff;
+    transition: all 0.5s ease-in-out;
+}
+
+/* x-burger */
+.x-burger {
+    border-radius: 5px;
+}
+
+.x-burger::before,
+.x-burger::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 6px;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+}
+
+.x-burger::before {
+    transform: translateY(-16px);
+}
+
+.x-burger::after {
+    transform: translateY(16px);
+}
+
+/* Animation */
+.x-burger-btn.open .x-burger {
+    transform: translateX(-50px);
+    background: transparent;
+}
+
+.x-burger-btn.open .x-burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+}
+
+.x-burger-btn.open .x-burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+
+/* coincide-burger */
+.coincide-btn {
+    position: relative;
+    transition: 1s;
+}
+
+.coincide-burger {
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+}
+
+.coincide-1 {
+    top: 40px;
+    transition: 0.5s;
+}
+
+.coincide-3 {
+    bottom: 40px;
+    transition: 0.5s;
+}
+
+/* two-burger */
+.two-btn {
+    position: relative;
+}
+.two-burger {
+    border-radius: 10px;
+    position: absolute;
+    transition: 0.5s;
+    width: 50px;
+    height: 6px;
+}
+
+.two-top {
+    top: 50px;
+    background-color: #fff;
+}
+
+.two-bottom {
+    bottom: 50px;
+    background-color: #fff;
+}
