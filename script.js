@@ -164,3 +164,49 @@ plusBtn.addEventListener("click", () => {
         plusOpen = false;
     }
 });
+
+// arrow-burger
+const arrowBtn = document.querySelector(".arrow-btn");
+const arrowTop = document.querySelector(".arrow-top");
+const arrowMid = document.querySelector(".arrow-mid");
+const arrowBottom = document.querySelector(".arrow-bottom");
+let arrowOpen = false;
+
+arrowBtn.addEventListener("click", () => {
+    if (!arrowOpen) {
+        arrowTop.classList.add("open");
+        arrowMid.classList.add("open");
+        arrowBottom.classList.add("open");
+
+        arrowOpen = true;
+    } else {
+        arrowTop.classList.remove("open");
+        arrowMid.classList.remove("open");
+        arrowBottom.classList.remove("open");
+
+        arrowOpen = false;
+    }
+});
+
+// dot-burger
+const dotBtn = document.querySelector(".dot-btn");
+const dotTop = document.querySelector(".dot-top");
+const dotMid = document.querySelector(".dot-mid");
+const dotBottom = document.querySelector(".dot-bottom");
+let dotOpen = false;
+
+dotBtn.addEventListener("click", () => {
+    if (!dotOpen) {
+        dotTop.classList.add("open");
+        dotMid.classList.add("open");
+        dotBottom.classList.add("open");
+
+        dotOpen = true;
+    } else {
+        dotTop.classList.remove("open");
+        dotMid.classList.remove("open");
+        dotBottom.classList.remove("open");
+
+        dotOpen = false;
+    }
+});
